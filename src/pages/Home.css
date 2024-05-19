@@ -97,10 +97,34 @@
  */
 
  .home-content {
+    
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     text-align: center;
+    
   }
   
+.grid-container {
+  margin-top: 3%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width as needed */
+    gap: 20px; /* Adjust spacing between items as needed */
+}
+
+.grid-container h3 {
+  font-family :'Times New Roman', Times, serif;
+}
+
+.grid-container > div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between image and text as needed */
+}
+
+.grid-container img {
+    width: 80px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
   

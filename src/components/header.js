@@ -2,9 +2,41 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.css';
 
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
+
+const useSubDropdown = () => {
+  let timeoutId;
+  const [showSubDropdown, setShowSubDropdown] = useState(false);
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutId);
+    setShowSubDropdown(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutId = setTimeout(() => {
+      setShowSubDropdown(false);
+    }, 50);  };
+
+  return { showSubDropdown, handleMouseEnter, handleMouseLeave };
+};
 
 export default function Navbarlist() {
+
+  const { showSubDropdown: showSubDropdown1, handleMouseEnter: handleMouseEnter1, handleMouseLeave: handleMouseLeave1 } = useSubDropdown();
+  const { showSubDropdown: showSubDropdown2, handleMouseEnter: handleMouseEnter2, handleMouseLeave: handleMouseLeave2 } = useSubDropdown();
+  const { showSubDropdown: showSubDropdown3, handleMouseEnter: handleMouseEnter3, handleMouseLeave: handleMouseLeave3 } = useSubDropdown();
+  const { showSubDropdown: showSubDropdown4, handleMouseEnter: handleMouseEnter4, handleMouseLeave: handleMouseLeave4 } = useSubDropdown();
+  const { showSubDropdown: showSubDropdown5, handleMouseEnter: handleMouseEnter5, handleMouseLeave: handleMouseLeave5 } = useSubDropdown();
+
+
+  let Navigatore = useNavigate();
+
+
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary sticky-top shadow">
       <Container className='nav'>
@@ -21,33 +53,320 @@ export default function Navbarlist() {
                 HOME
               </span>
             </Link>
-            <NavDropdown title="PRODUCTS" id="basic-nav-dropdown" className="nav-dropdown-title">
-              <Link to="/category/cables" className="dropdown-item">
-                <span className='underline-word'>
-                  Cable Gland
-                </span>
-              </Link>
-              {/* <NavDropdown.Divider /> */}
-              <Link to="/category/sanitary" className="dropdown-item">
-                <span className='underline-word'>
-                  Sanitary Parts
-                </span>
-              </Link>
-              <NavDropdown.Divider />
-              <Link to="/fq" className="dropdown-item">
-                <span className='underline-word'>
-                  FAQ
-                </span>
-              </Link>
-            </NavDropdown>
             <Link to="/about" className="nav-link">
               <span className='underline-word'>
                 ABOUT US
               </span>
             </Link>
+            <NavDropdown title="PRODUCTS" id="basic-nav-dropdown" className="nav-dropdown-title" onMouseEnter={handleMouseEnter1}
+              onMouseLeave={handleMouseLeave1}
+              show={showSubDropdown1}
+            >
+              <NavDropdown.Item >
+                <NavDropdown title="Cable Gland" drop="end" className='sub-drop' onMouseEnter={handleMouseEnter2}
+                  onMouseLeave={handleMouseLeave2}
+                  show={showSubDropdown2} 
+                  onClick={() => Navigatore("/category/cables")}
+                  >
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type1" className="dropdown-item" >
+                      <span className='underline-word'>
+                        Cable Type 1
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+
+                </NavDropdown>
+              </NavDropdown.Item>
+              <NavDropdown.Item >
+                <NavDropdown title="Sanitary Parts" drop="end" className='sub-drop' onMouseEnter={handleMouseEnter3}
+                  onMouseLeave={handleMouseLeave3}
+                  show={showSubDropdown3} 
+                  onClick={() => Navigatore("/category/sanitary")}
+                  >
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type1" className="dropdown-item" >
+                      <span className='underline-word'>
+                      Sanitary Parts Type 1
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                      Sanitary Parts Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+
+                </NavDropdown>
+              </NavDropdown.Item>
+              <NavDropdown.Item >
+                <NavDropdown title="Brass Insert" drop="end" className='sub-drop' onMouseEnter={handleMouseEnter4}
+                  onMouseLeave={handleMouseLeave4}
+                  show={showSubDropdown4} 
+                  onClick={() => Navigatore("/category/brass-insert")}
+                  >
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type1" className="dropdown-item" >
+                      <span className='underline-word'>
+                      Brass Insert Type 1
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                      Sanitary Parts Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+
+                </NavDropdown>
+              </NavDropdown.Item>
+              <NavDropdown.Item >
+                <NavDropdown title="Brass Spirit Bolt" drop="end" className='sub-drop' onMouseEnter={handleMouseEnter5}
+                  onMouseLeave={handleMouseLeave5}
+                  show={showSubDropdown5} 
+                  onClick={() => Navigatore("/category/brass-spirit-bolt")}
+                  >
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type1" className="dropdown-item" >
+                      <span className='underline-word'>
+                      Brass Spirit Bolt Type 1
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                      /category/brass-spirit-bolt Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/cable-type2" className="dropdown-item">
+                      <span className='underline-word'>
+                        Cable Type 2
+                      </span>
+                    </Link>
+                  </NavDropdown.Item>
+
+                </NavDropdown>
+              </NavDropdown.Item>
+              
+              <NavDropdown.Divider />
+              <Link to="/fq" className="dropdown-item">
+                <span className='underline-word mx-2' style={{fontWeight:'550'}}>
+                  FAQ
+                </span>
+              </Link>
+            </NavDropdown>
+
             <Link to="/quality" className="nav-link">
               <span className='underline-word'>
                 QUALITY
+              </span>
+            </Link>
+            <Link to="/ourCustomer" className="nav-link">
+              <span className='underline-word'>
+                OUR CUSTOMER
               </span>
             </Link>
             <Link to="/contact" className="nav-link">

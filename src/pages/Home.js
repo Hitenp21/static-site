@@ -143,14 +143,38 @@ export default function Home() {
 
 
 
-    <div>
+    <div className='my-10'>
 
-    <CountsContainer />
+      <CountsContainer />
     </div>
+    <div class="grid-container">
+    <div>
+        <img src='/images/home/customer support.png' alt='customer-support.png' />
+        <div>
+            <h3>Customer Support</h3>
+            <p>Our clients tell us our passion is contagious and invigorating. People who are passionate about what they do deliver exceptional results and have fun doing it.</p>
+        </div>
+    </div>
+    <div>
+        <img src='/images/home/team work.png' alt='team-work.png' />
+        <div>
+            <h3>Team Work</h3>
+            <p>Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives.</p>
+        </div>
+    </div>
+    <div>
+        <img src='/images/home/process.png' alt='process.png' />
+        <div>
+            <h3>Process Oriented</h3>
+            <p>Processes are developed and tested to ensure the product or quality. This also involves making sure suppliers offer quality supplies needed to produce products.</p>
+        </div>
+    </div>
+</div>
+
 
     <div class='home-content' id='content'>
       <h2>
-          OUR RANGE OF PRODUCTS
+        OUR RANGE OF PRODUCTS
       </h2>
 
       <div class="item e4">

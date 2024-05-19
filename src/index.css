@@ -256,8 +256,8 @@ ul.list-unstyled {
 @media screen and (max-width: 1440px) and (min-width: 1026px) {
 
   /*About pag*/
-  
-  
+
+
 
 
   /* Heder commpnet*/
@@ -310,7 +310,7 @@ ul.list-unstyled {
 @media screen and (max-width: 1025px) and (min-width: 769px) {
 
   /*About pag*/
-  
+
 
 
 
@@ -318,32 +318,32 @@ ul.list-unstyled {
 
 
   /*contact us*/
-  
+
 
   /*Footer*/
-  
+
 }
 
 /* For viewport heights between 779px and 450px */
 @media screen and (max-width: 769px) and (min-width: 427px) {
 
   /*About pag*/
- 
+
 
 
 
 
 
   /*contact us*/
- 
+
 
 
   /*Footer*/
-  
+
 }
 
 @media screen and (max-width: 426px) and (min-width: 377px) {
-  
+
 
 
 
@@ -354,7 +354,7 @@ ul.list-unstyled {
 
 
   /*contact us*/
-  
+
 
 
   /* Footer */
@@ -438,24 +438,24 @@ ul.list-unstyled {
 @media screen and (max-width: 376px) and (min-width: 321px) {
   /*About pag*/
 
-  
+
 
 
 
 
 
   /*contact us*/
-  
+
 
   /*Footer */
 
- 
+
 }
 
 @media screen and (max-width: 320px) and (min-width: 278px) {
 
   /*About pag*/
-  
+
 
 
 
@@ -663,31 +663,44 @@ ul.list-unstyled {
   display: grid;
   font-family: amiri, serif;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; /* Adjust the gap between divs */
-  margin: 20px; /* Margin on all sides */
+  gap: 20px;
+  /* Adjust the gap between divs */
+  margin: 20px;
+  /* Margin on all sides */
 }
 
-.category > div {
-  border: 1px solid #ccc; /* Border style */
-  border-radius: 10px; /* Border radius */
-  padding: 10px; /* Padding for content */
-  transition: all 0.3s ease; /* Smooth transition effect */
+.category>div {
+  border: 1px solid #ccc;
+  /* Border style */
+  border-radius: 10px;
+  /* Border radius */
+  padding: 10px;
+  /* Padding for content */
+  transition: all 0.3s ease;
+  /* Smooth transition effect */
 }
 
-.category > div:hover {
-  transform: scale(1.05); /* Increase size on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow on hover */
-  border-color: #007bff; /* Change border color on hover */
+.category>div:hover {
+  transform: scale(1.05);
+  /* Increase size on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add box shadow on hover */
+  border-color: #007bff;
+  /* Change border color on hover */
 }
 
-.category > div > p {
-  text-align: center; /* Center align the text */
+.category>div>p {
+  text-align: center;
+  /* Center align the text */
 }
 
-.category > div > img {
-  max-width: 100%; /* Ensure images don't overflow */
+.category>div>img {
+  max-width: 100%;
+  /* Ensure images don't overflow */
 }
 
+
+/*product header*/
 
 
 
@@ -697,41 +710,59 @@ ul.list-unstyled {
   display: grid;
   font-family: amiri, serif;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; /* Adjust the gap between divs */
-  margin: 20px; /* Margin on all sides */
+  gap: 20px;
+  /* Adjust the gap between divs */
+  margin: 20px;
+  /* Margin on all sides */
 }
 
-.subCategory > div {
-  border: 1px solid #ccc; /* Border style */
-  border-radius: 10px; /* Border radius */
-  padding: 10px; /* Padding for content */
-  transition: all 0.3s ease; /* Smooth transition effect */
+.subCategory>div {
+  border: 1px solid #ccc;
+  /* Border style */
+  border-radius: 10px;
+  /* Border radius */
+  padding: 10px;
+  /* Padding for content */
+  transition: all 0.3s ease;
+  /* Smooth transition effect */
 }
 
-.subCategory > div:hover {
-  transform: scale(1.05); /* Increase size on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow on hover */
-  border-color: #007bff; /* Change border color on hover */
+.subCategory>div:hover {
+  transform: scale(1.05);
+  /* Increase size on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add box shadow on hover */
+  border-color: #007bff;
+  /* Change border color on hover */
 }
 
-.subCategory > div > p {
-  text-align: center; /* Center align the text */
+.subCategory>div>p {
+  text-align: center;
+  /* Center align the text */
 }
 
-.subCategory > div > img {
-  max-width: 100%; /* Ensure images don't overflow */
+.subCategory>div>img {
+  max-width: 100%;
+  /* Ensure images don't overflow */
 }
 
 .subCategoryh1 {
   text-align: center;
   font-size: 21px;
   font-family: amiri, serif;
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
   font-weight: 600;
-  background-color: #d6d6d6ab;
+  /* background-color: #d6d6d6ab; */
   letter-spacing: 1px;
   padding: 5px;
-  margin-top: 15PX;
+  /* margin-top: 15PX; */
+}
+
+.subCategoryP {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 0px !important;
+  font-family: amiri, serif;
 }
 
 
@@ -744,8 +775,8 @@ ul.list-unstyled {
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #f9f9f9; 
+  /* align-items: center; */
+  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -753,10 +784,11 @@ ul.list-unstyled {
 
 .supersubCategory h2 {
   font-size: 1.8rem;
-  color: #333; 
+  color: #333;
   margin-bottom: 3%;
   letter-spacing: 1px;
-  font-family: Amiri ,serif;
+  font-family: Amiri, serif;
+  text-align: center;
 }
 
 .subCatProduct {
@@ -770,16 +802,27 @@ ul.list-unstyled {
   width: auto;
 }
 
+.productImageContainer,
+.tableImageContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Optional: Adjust margin as needed */
+}
+
 .supersubCategory p {
 
   font-size: 1.2rem;
   font-weight: 500;
-  color: #666; /* Medium dark text color */
+  color: #666;
+  /* Medium dark text color */
   margin-top: 5px;
   margin-bottom: 10px;
-  margin-left: 17%; /* Add left margin */
-  margin-right: 0; /* Ensure no margin on the right side */
-  align-self: flex-start; /* Override align-items for <p> tags */
+  margin-left: 17%;
+  /* Add left margin */
+  margin-right: 0;
+  /* Ensure no margin on the right side */
+  align-self: flex-start;
+  /* Override align-items for <p> tags */
 }
 
 
@@ -788,7 +831,7 @@ ul.list-unstyled {
 
 .home-content {
   display: grid;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   text-align: center;
@@ -796,7 +839,7 @@ ul.list-unstyled {
 }
 
 .home-content h2 {
-  grid-column: 1 / -1; 
+  grid-column: 1 / -1;
 }
 
 .home-content div {
@@ -813,49 +856,61 @@ ul.list-unstyled {
 
 .home-content div:hover {
   border-color: #007bff;
-} 
+}
 
 .item {
-  position: relative; /* Ensure the text is positioned relative to the item */
+  position: relative;
+  /* Ensure the text is positioned relative to the item */
 }
 
 .item img {
   width: 100%;
   height: auto;
-  transition: opacity 0.3s ease; /* Add transition for smoother effect */
+  transition: opacity 0.3s ease;
+  /* Add transition for smoother effect */
 }
 
 .item:hover img {
-  opacity: 0.7; /* Decrease opacity of the image on hover */
+  opacity: 0.7;
+  /* Decrease opacity of the image on hover */
 }
 
 .item .text4 {
   position: absolute;
-  top: 50%; /* Position text vertically at the center */
-  left: 50%; /* Position text horizontally at the center */
-  transform: translate(-50%, -50%); /* Center text */
-  opacity: 0; /* Initially hide the text */
-  transition: opacity 0.3s ease; /* Add transition effect */
-  border: none; /* Remove border */
+  top: 50%;
+  /* Position text vertically at the center */
+  left: 50%;
+  /* Position text horizontally at the center */
+  transform: translate(-50%, -50%);
+  /* Center text */
+  opacity: 0;
+  /* Initially hide the text */
+  transition: opacity 0.3s ease;
+  /* Add transition effect */
+  border: none;
+  /* Remove border */
   color: #000000;
 }
 
 .item:hover .text4 {
-  opacity: 1; /* Show the text on hover */
+  opacity: 1;
+  /* Show the text on hover */
 }
 
 .item .line.middle {
-  background-color: #333; /* Dark color for the line */
+  background-color: #333;
+  /* Dark color for the line */
 }
 
 .vl span {
-  font-family: "Nunito Sans", Sans-serif;;
+  font-family: "Nunito Sans", Sans-serif;
+  ;
   color: white;
   /* background: #000; */
 }
 
-.vl h1{
-  font-family: Amiri , serif;
+.vl h1 {
+  font-family: Amiri, serif;
   color: white;
 }
 
@@ -871,5 +926,3 @@ ul.list-unstyled {
 
 
 /* styles.css */
-
-

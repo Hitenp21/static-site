@@ -240,9 +240,11 @@ export function Footer() {
               <span className="footer-heading orange-underline">{t("footer.company")}</span>
               <ul className="list-unstyled">
                 <li><Link to="/" className="footer-link"><span className="underline-word">{t("footer.home")}</span></Link></li>
-                <li><Link to="/category" className="footer-link"><span className="underline-word">{t("footer.category")}</span></Link></li>
                 <li><Link to="/about" className="footer-link"><span className="underline-word">{t("footer.aboutUs")}</span></Link></li>
+                <li><Link to="/category" className="footer-link"><span className="underline-word">{t("footer.category")}</span></Link></li>
                 <li><Link to="/quality" className="footer-link"><span className="underline-word">{t("footer.quality")}</span></Link></li>
+                <li><Link to="/ourcustomer" className="footer-link"><span className="underline-word">Our Customer</span></Link></li>
+
                 <li><Link to="/contact" className="footer-link"><span className="underline-word">{t("footer.contactUs")}</span></Link></li>
               </ul>
             </Col>
@@ -251,6 +253,9 @@ export function Footer() {
               <ul className="list-unstyled">
                 <li><Link to="/category/cables" className="footer-link"><span className="underline-word">{t("footer.cableGland")}</span></Link></li>
                 <li><Link to="/category/sanitary" className="footer-link"><span className="underline-word">{t("footer.sanitaryParts")}</span></Link></li>
+                <li><Link to="/category/brass-insert" className="footer-link"><span className="underline-word">Brass Insert</span></Link></li>
+                <li><Link to="/category/brass-spirit-bolt" className="footer-link"><span className="underline-word">Brass Spirit Bolt</span></Link></li>
+
               </ul>
             </Col>
 

@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import "../index.css";
+import ProductHeader from "../components/productHeader";
 
 
 export default function Category() {
     return (
+        <>
+        <ProductHeader />
         <div className="category">
             <div>
                 <p>Cable Gland</p>
@@ -35,5 +38,6 @@ export default function Category() {
 
             </div>
         </div>
+        </>
     )
 }
