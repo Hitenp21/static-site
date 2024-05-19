@@ -164,7 +164,7 @@ export default function Contact() {
           {/* Right side with contact form */}
           <div className="w-full">
             <div className="contact-tital mx-auto  max-w-xl text-dark">
-              <h2 className="title" style={{ fontFamily: 'Amiri serif', wordSpacing: "2px", letterSpacing: "1px" }}>
+              <h2 className="contact-title" style={{ fontFamily: 'Amiri serif', wordSpacing: "2px", letterSpacing: "1px" }}>
                 CONTACT US
               </h2>
             </div>
